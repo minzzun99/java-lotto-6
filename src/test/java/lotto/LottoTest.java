@@ -1,5 +1,7 @@
 package lotto;
 
+import lotto.domain.Lotto;
+import lotto.domain.RandomNumberGenerator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -24,4 +26,14 @@ class LottoTest {
     }
 
     // 아래에 추가 테스트 작성 가능
+    @DisplayName("로또 금액이 1,000으로 나누어떨어지지 않으면 예외가 발생한다.")
+    @Test
+    void lottoPurchaseAmountDivideThousand() {
+        RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
+        int price = 2001;
+
+        assertThatThrownBy(() -> randomNumberGenerator.generate(price))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("[ERROR] 로또 구매 금액이 1,000원으로 나누어 떨어지지 않습니다.");
+    }
 }
