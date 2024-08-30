@@ -7,11 +7,11 @@ import camp.nextstep.edu.missionutils.Console;
 import lotto.exception.InputFormatValidator;
 
 public class InputView {
-    static InputFormatValidator inputFormatValidator = new InputFormatValidator();
+    static InputFormatValidator validator = new InputFormatValidator();
 
     // 구매 금액 입력 받는 메서드
     public static int inputPurchaseLotto() {
         printMessage(INPUT_PURCHASE_AMOUNT);
-        return inputFormatValidator.purchaseInput(Console.readLine().replaceAll("\\s", ""));
+        return validator.purchaseInput(Console.readLine().replaceAll("\\s", ""));
     }
 }
