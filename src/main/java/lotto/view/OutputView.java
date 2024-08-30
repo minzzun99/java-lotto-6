@@ -11,9 +11,7 @@ public class OutputView {
     }
 
     public static void printLottoCount(int lottoCount) {
-        StringBuilder sb = new StringBuilder();
-        sb.append('\n').append(lottoCount).append(LOTTO_COUNT.getMessage());
-        System.out.println(sb);
+        System.out.println("\n" + lottoCount + LOTTO_COUNT.getMessage());
     }
 
     public static void printErrorMessage(String error) {
