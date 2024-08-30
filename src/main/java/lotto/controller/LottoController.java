@@ -3,6 +3,7 @@ package lotto.controller;
 import static lotto.view.InputView.*;
 import static lotto.view.OutputView.*;
 
+import lotto.domain.Lotto;
 import lotto.domain.Lottos;
 import lotto.domain.RandomNumberGenerator;
 
@@ -25,6 +26,12 @@ public class LottoController {
     }
 
     public static void lottoListPrint(Lottos lottoList) {
+        // 로또 구입 개수 출력
+        printLottoCount(lottoList.getLottoList().size());
 
+        // 구매한 로또 출력
+        for (Lotto lotto : lottoList.getLottoList()) {
+            printLottoList(lotto.getNumbers());
+        }
     }
 }
