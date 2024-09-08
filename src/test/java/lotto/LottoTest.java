@@ -1,6 +1,8 @@
 package lotto;
 
+import java.util.ArrayList;
 import lotto.domain.Lotto;
+import lotto.domain.Lottos;
 import lotto.domain.RandomNumberGenerator;
 import lotto.exception.InputFormatValidator;
 import org.junit.jupiter.api.DisplayName;

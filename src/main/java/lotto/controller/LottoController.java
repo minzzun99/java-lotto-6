@@ -33,5 +33,12 @@ public class LottoController {
         for (Lotto lotto : lottoList.getLottoList()) {
             printLottoList(lotto.getNumbers());
         }
+
+        inputWinningLotto();
+    }
+
+    public static void winningLotto() {
+        Lotto winningNumber = new Lotto(inputWinningLotto());
+
     }
 }
